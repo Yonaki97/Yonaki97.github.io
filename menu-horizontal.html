@@ -1,0 +1,75 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Css/css/w3.css">
+<body>
+<div class="w3-container">
+ <h2>Menampilkan berbagai animate dalam W3 CSS</h2>
+ <p>Click Pada Menu Dibawah</p>
+</div>
+<div class="w3-bar w3-orange w3-card-4">
+ <button class="w3-bar-item w3-button w3-hover-red" onclick="openKota('Bandung')">Bandung</button>
+ <button class="w3-bar-item w3-button" onclick="openKota('Garut')">Garut</button>
+ <button class="w3-bar-item w3-button" onclick="openKota('Tasik')">Tasik</button>
+ <button class="w3-bar-item w3-button" onclick="openKota('Siak')">Siak</button>
+ <div class="w3-dropdown-hover">
+    <button class="w3-button">Dropdown</button>
+    <div class="w3-dropdown-content w3bar-block w3-card-4">
+    <button class="w3-bar-item w3-button" onclick="openKota('latihan12')"></button>
+    </div>
+    <div id="latihan12" class="w3-container kota w3-animate-right" style="display: none;">
+        <center>
+            <div class="w3-hover-blue w3-animate-fading">
+            <h1> Animation is Fun !</h1></div><br>
+            <div class="w3-animate-fading">
+            <img src="../Css/GAMBAR/topi jerami.jpg"style="width: 20%;"><br></div>
+            <div class="w3-animate-zoom">
+            <img src="../Css/GAMBAR/bendera bajak laut.jpg"style="width: 20%;"><br></div>
+            <div class="w3-animate-opacity">
+            <img src="../Css/GAMBAR/Naruto.jpg"style="width: 20%;"><br></div>
+            <div class="w3-animate-top">
+            <img src="../Css/GAMBAR/rubah.png"style="width: 20%;"></div>
+        </center>
+    </div>
+ </div>
+</div>
+<div id="Bandung" class="w3-container kota w3-animate-zoom w3-blue" style="display:none">
+    <center>
+ <h2>Bandung</h2>
+ <p>Dikenal dengan Julukan Kota Kembang, adalah Ibu Kota dari Provinsi Jawa Barat.
+    <img src="../Css/GAMBAR/Bandung.jpg" style="width: 55%;">
+ </center>
+ </p>
+</div>
+<div id="Garut" class="w3-container kota w3-animate-fading w3-red" style="display:none">
+    <center>
+        <div class="w3-animate w3-spin">
+ <h2>Garut</h2>
+</div>
+ <p>Dikenal dengan Julukan Kota Dodol, dan jaman juga dikenal dengan Jeruk Garut atau Domba
+Garut</p></center>
+</div>
+<div id="Tasik" class="w3-container kota w3-animate-opacity w3-green" style="display:none">
+    <center>
+ <h2>Tasikmalaya</h2>
+ <p>Atau Tasikmalaya Dikenal dengan Julukan Kota Intan, dan Kota Kerajinan Tangan</p></center>
+</div>
+<div id="Siak" class="w3-container kota w3-animate-bottom w3-yellow" style="display:none">
+    <center>
+ <h2>Siak Sri Indrapura</h2>
+ <p>Siak dikenal dengan kota kesultanan , yang pernah dipimpin oleh Sultan Syarif Kasim II</p>
+<img src="../Css/GAMBAR/Siak.jpg" style="width: 50%;"></center>
+</div>
+</div>
+<script>
+function openKota(namakota) {
+ var i;
+ var x = document.getElementsByClassName("kota");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ document.getElementById(namakota).style.display = "block";
+}
+</script>
+</body>
+</html>
